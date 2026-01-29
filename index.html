@@ -462,28 +462,33 @@
         </div>
 
         <div class="activity-section" id="activitySection">
-            <h2>어떤 활동을 계획하고 계신가요?</h2>
-            <textarea
-                class="activity-input"
-                id="activityInput"
-                placeholder="예: 7살 아이와 함께 동화책을 만들고 싶어요. 아이가 직접 이야기를 구상하고 그림도 넣어서 완성하고 싶습니다."
-            ></textarea>
+            <h2>아이와 함께 할 활동을 선택하세요</h2>
 
             <div class="example-activities">
-                <h4>예시 활동 (클릭하면 자동 입력됩니다)</h4>
+                <h4>선택 활동 (클릭하면 맞춤 AI 비서를 추천해 드립니다)</h4>
                 <div class="example-chips">
-                    <div class="example-chip" onclick="setExample('아이와 함께 나만의 동화책을 만들고 싶어요. 스토리도 짜고 삽화도 넣고 싶습니다.')">동화책 만들기</div>
-                    <div class="example-chip" onclick="setExample('초등학생 아이와 주말에 캠핑을 가려고 합니다. 장소 추천과 준비물, 일정을 계획하고 싶어요.')">가족 캠핑 계획</div>
-                    <div class="example-chip" onclick="setExample('아이가 자기만의 캐릭터와 브랜드를 만들고 싶어해요. 로고도 만들고 굿즈 디자인도 해보고 싶습니다.')">브랜드/캐릭터 만들기</div>
-                    <div class="example-chip" onclick="setExample('집에서 아이와 함께 할 수 있는 과학 실험을 찾고 있어요. 재미있으면서 교육적인 것을 원합니다.')">과학 실험하기</div>
-                    <div class="example-chip" onclick="setExample('아이와 함께 간단한 요리를 만들어보려고 해요. 아이가 직접 참여할 수 있는 레시피가 필요합니다.')">함께 요리하기</div>
-                    <div class="example-chip" onclick="setExample('아이가 좋아하는 노래를 직접 만들어보고 싶어해요. 작곡이나 음악 만들기를 해보고 싶습니다.')">음악/노래 만들기</div>
-                    <div class="example-chip" onclick="setExample('아이의 학교 발표 자료를 멋지게 만들고 싶어요. PPT나 영상으로 만들어보려고 합니다.')">발표 자료 만들기</div>
-                    <div class="example-chip" onclick="setExample('아이와 함께 짧은 애니메이션이나 영상을 만들어보고 싶어요.')">영상/애니메이션 만들기</div>
+                    <div class="example-chip" onclick="selectActivity('아이와 함께 나만의 동화책을 만들고 싶어요. 스토리도 짜고 삽화도 넣고 싶습니다.')">동화책 만들기</div>
+                    <div class="example-chip" onclick="selectActivity('초등학생 아이와 주말에 캠핑을 가려고 합니다. 장소 추천과 준비물, 일정을 계획하고 싶어요.')">가족 캠핑 계획</div>
+                    <div class="example-chip" onclick="selectActivity('아이가 자기만의 캐릭터와 브랜드를 만들고 싶어해요. 로고도 만들고 굿즈 디자인도 해보고 싶습니다.')">브랜드/캐릭터 만들기</div>
+                    <div class="example-chip" onclick="selectActivity('집에서 아이와 함께 할 수 있는 과학 실험을 찾고 있어요. 재미있으면서 교육적인 것을 원합니다.')">과학 실험하기</div>
+                    <div class="example-chip" onclick="selectActivity('아이와 함께 간단한 요리를 만들어보려고 해요. 아이가 직접 참여할 수 있는 레시피가 필요합니다.')">함께 요리하기</div>
+                    <div class="example-chip" onclick="selectActivity('아이가 좋아하는 노래를 직접 만들어보고 싶어해요. 작곡이나 음악 만들기를 해보고 싶습니다.')">음악/노래 만들기</div>
+                    <div class="example-chip" onclick="selectActivity('아이의 학교 발표 자료를 멋지게 만들고 싶어요. PPT나 영상으로 만들어보려고 합니다.')">발표 자료 만들기</div>
+                    <div class="example-chip" onclick="selectActivity('아이와 함께 짧은 애니메이션이나 영상을 만들어보고 싶어요.')">영상/애니메이션 만들기</div>
+                    <div class="example-chip" onclick="selectActivity('아이와 함께 그림을 그리고 싶어요. 상상 속 캐릭터나 풍경을 그려보고 싶습니다.')">그림/일러스트 그리기</div>
+                    <div class="example-chip" onclick="selectActivity('아이의 생일 파티를 계획하고 있어요. 초대장과 장식을 직접 만들고 싶습니다.')">생일 파티 준비</div>
+                    <div class="example-chip" onclick="selectActivity('아이와 함께 간단한 게임이나 앱을 만들어보고 싶어요. 코딩을 처음 배워보려고 합니다.')">코딩/게임 만들기</div>
+                    <div class="example-chip" onclick="selectActivity('아이가 숙제나 학습에서 어려워하는 부분이 있어요. 재미있게 공부할 수 있도록 도와주고 싶습니다.')">학습/숙제 도우미</div>
+                    <div class="example-chip" onclick="selectActivity('가족 여행 계획을 세우고 있어요. 아이가 가고 싶은 곳으로 일정을 짜고 싶습니다.')">가족 여행 계획</div>
+                    <div class="example-chip" onclick="selectActivity('아이가 만든 이야기를 오디오북으로 만들어주고 싶어요. 목소리 녹음이나 음성 생성을 해보고 싶습니다.')">오디오북 만들기</div>
+                    <div class="example-chip" onclick="selectActivity('아이와 함께 유튜브 영상을 만들어보고 싶어요. 편집과 효과도 넣어보고 싶습니다.')">유튜브 영상 제작</div>
+                    <div class="example-chip" onclick="selectActivity('아이의 사진을 예쁘게 편집하고 앨범을 만들고 싶어요.')">사진 편집/앨범 만들기</div>
+                    <div class="example-chip" onclick="selectActivity('아이와 함께 보드게임이나 카드게임을 직접 만들어보고 싶어요.')">보드게임/카드게임 만들기</div>
+                    <div class="example-chip" onclick="selectActivity('아이가 일기나 독서록을 쓰는 것을 도와주고 싶어요. 글쓰기 습관을 기르고 싶습니다.')">일기/독서록 쓰기</div>
+                    <div class="example-chip" onclick="selectActivity('아이와 함께 외국어를 공부하고 싶어요. 재미있게 영어나 다른 언어를 배우고 싶습니다.')">외국어 학습</div>
+                    <div class="example-chip" onclick="selectActivity('아이의 꿈이나 장래희망에 대해 알아보고 싶어요. 관련 정보를 함께 탐색하고 싶습니다.')">진로/꿈 탐색</div>
                 </div>
             </div>
-
-            <button class="submit-btn" id="submitBtn" onclick="getRecommendations()">AI 비서 추천받기</button>
         </div>
 
         <div class="loading" id="loading" style="display: none;">
@@ -850,25 +855,18 @@
             "요리": ["요리", "레시피", "음식", "만들기", "베이킹", "쿠킹"]
         };
 
-        function setExample(text) {
-            document.getElementById('activityInput').value = text;
-        }
+        let selectedActivity = '';
 
-        function getRecommendations() {
-            const activity = document.getElementById('activityInput').value.trim().toLowerCase();
-
-            if (!activity) {
-                alert('활동 내용을 입력해 주세요.');
-                return;
-            }
+        function selectActivity(text) {
+            selectedActivity = text;
 
             document.getElementById('activitySection').style.display = 'none';
             document.getElementById('loading').style.display = 'block';
 
             // 시뮬레이션을 위한 짧은 딜레이
             setTimeout(() => {
-                const recommendations = analyzeAndRecommend(activity);
-                displayResults(document.getElementById('activityInput').value, recommendations);
+                const recommendations = analyzeAndRecommend(text.toLowerCase());
+                displayResults(text, recommendations);
             }, 1500);
         }
 
@@ -1001,7 +999,7 @@
         function newSearch() {
             document.getElementById('resultsSection').style.display = 'none';
             document.getElementById('activitySection').style.display = 'block';
-            document.getElementById('activityInput').value = '';
+            selectedActivity = '';
         }
     </script>
 </body>
